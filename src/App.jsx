@@ -2,7 +2,7 @@ import SigmaComponent from "./components/sigmacomponent";
 
 function App() {
   return (
-    <div id="container" className="vh-100 vw-100 d-flex flex-column">
+    <div id="container" className="d-flex flex-column" style={{height:"100dvh", width:"100dvw"}}>
       <SigmaComponent />
     </div>
   );

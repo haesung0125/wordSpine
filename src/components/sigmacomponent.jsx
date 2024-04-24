@@ -32,7 +32,7 @@ function SigmaComponent(){
         setVisibility(true);
         setWordName(word);
         setWordDefinition(dictionaryData[word]);
-        setParentName(parentData[word])
+        setParentName(parentData[word]);
     }
 
     function hideWordCard(){
@@ -44,9 +44,7 @@ function SigmaComponent(){
         <SigmaContainer settings={sigmaSettings}>
             <ControlsContainer position={"top-left"} style={{border:"0", backgroundColor:"transparent", fontFamily:'GowunBatang-Regular'}}>
                 <Title/>
-            </ControlsContainer>
-            <ControlsContainer position={"top-right"} style={{fontFamily:'GowunBatang-Regular'}}>
-                <SearchControl labels={{placeholder:"단어찾기", text:"단어찾기"}} style={{ width: "200px" }}/>
+                <SearchControl labels={{placeholder:"단어찾기", text:"단어찾기"}} style={{width:"200px"}}/>
             </ControlsContainer>
             <GraphEvents setWordCard={setWordCard} hideWordCard={hideWordCard}/>
             <LoadGraph />

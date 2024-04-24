@@ -7,7 +7,7 @@ function LoadGraph(){
     const loadGraph = useLoadGraph();
     let graph = new Graph();
     useEffect(() => {
-        fetch("/data.gexf").then((response) =>
+        fetch("https://raw.githubusercontent.com/haesung0125/wordSpine/main/public/data.gexf").then((response) =>
             response.text()
         ).then((str) => {
             graph=gexf.parse(Graph,str);

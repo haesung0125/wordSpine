@@ -20,7 +20,7 @@ function WordDetail(props){
                 <p>{sigma.getGraph().hasNode(props.word)? sigma.getGraph().inDegree(props.word): 0}개의 단어에서 가장 중요한 단어입니다.</p>
                 <p>{(sigma.getGraph().hasNode(props.word)? sigma.getGraph().inNeighbors(props.word): []).map(word => (<a key={word} onClick={()=>{props.setWordCard(word); camera.gotoNode(word); sigma.getGraph().setNodeAttribute(word, "highlighted", true)}}>{word} </a>))} </p>
                 <a href="#" className="card-link float-start" onClick={()=>{let parent=(sigma.getGraph().hasNode(props.word)? sigma.getGraph().outNeighbors(props.word): []); props.setWordCard(parent); camera.gotoNode(parent); sigma.getGraph().setNodeAttribute(parent, "highlighted", true);}}>부모찾기</a>
-                <a href="/howto.html" className="card-link float-end" target="_blank">분석 방법 알아보기</a>
+                <a href="/wordSpine/howto.html" className="card-link float-end" target="_blank">분석 방법 알아보기</a>
               </div>
             </div>
           </div>
